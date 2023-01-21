@@ -110,9 +110,7 @@ snapshotButton.onclick = function() {
   document.getElementById("result4").innerHTML = " ";
   document.getElementById("result5").innerHTML = " ";
   
-  document.getElementById("probability").innerHTML = '<b>Probability</b>';
-
-
+ 
   const sendBlob = createBlob(canvas.toDataURL());
   xhr.send(sendBlob);
   
@@ -122,7 +120,7 @@ snapshotButton.onclick = function() {
     if (xhr.readyState == 4){
       if (xhr.status == 200) {
         document.getElementById("probability").innerHTML = '<b>Probability</b>';
-        document.getElementById("result1").innerHTML = '<p> <snap style="font-weight:bold;font-size:larger">' + (Number(response.predictions[0].probability).toFixed(2)) + '</snap><br>' + response.predictions[0].tagName.toUpperCase() + '</p>';
+        document.getElementById("result1").innerHTML = '<p> <snap style="font-weight:bold;font-size:1.2em">' + (Number(response.predictions[0].probability).toFixed(2)) + '</snap><br>' + response.predictions[0].tagName.toUpperCase() + '</p>';
         document.getElementById("result2").innerHTML = '<p> <snap style="font-weight:bold;font-size:larger;color:gray">' + (Number(response.predictions[1].probability).toFixed(2)) + '</snap><br>' + response.predictions[1].tagName.toUpperCase() + '</p>';
         document.getElementById("result3").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[2].probability).toFixed(2)) + '</snap><br>' + response.predictions[2].tagName.toUpperCase() + '</p>';
         document.getElementById("result4").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[3].probability).toFixed(2)) + '</snap><br>' + response.predictions[3].tagName.toUpperCase() + '</p>';
