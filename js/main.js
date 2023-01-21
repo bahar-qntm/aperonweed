@@ -119,7 +119,7 @@ snapshotButton.onclick = function() {
     let response = JSON.parse(xhr.responseText);
     if (xhr.readyState == 4){
       if (xhr.status == 200) {
-        document.getElementById("probability").innerHTML = '<b>Probability</b>';
+        document.getElementById("probability").innerHTML = '<b>Color - Probability</b>';
         document.getElementById("result1").innerHTML = '<p> <snap style="font-weight:bold;font-size:1.5em">' + (Number(response.predictions[0].probability).toFixed(2) * 100) + "%" + '</snap><br>' + response.predictions[0].tagName.toUpperCase() + '</p>';
         document.getElementById("result2").innerHTML = '<p> <snap style="font-weight:bold;font-size:1.5em;color:gray">' + (Number(response.predictions[1].probability).toFixed(2) * 100) + "%" + '</snap><br>' + response.predictions[1].tagName.toUpperCase() + '</p>';
         document.getElementById("result3").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:gray">' + (Number(response.predictions[2].probability).toFixed(2) * 100) + "%" + '</snap><br><snap style="font-weight:normal;font-size:smaller;color:gray">' + response.predictions[2].tagName.toUpperCase() + '</snap></p>';
