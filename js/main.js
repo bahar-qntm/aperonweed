@@ -122,9 +122,9 @@ snapshotButton.onclick = function() {
         document.getElementById("probability").innerHTML = '<b>Probability</b>';
         document.getElementById("result1").innerHTML = '<p> <snap style="font-weight:bold;font-size:1.2em">' + (Number(response.predictions[0].probability).toFixed(2)) + '</snap><br>' + response.predictions[0].tagName.toUpperCase() + '</p>';
         document.getElementById("result2").innerHTML = '<p> <snap style="font-weight:bold;font-size:larger;color:gray">' + (Number(response.predictions[1].probability).toFixed(2)) + '</snap><br>' + response.predictions[1].tagName.toUpperCase() + '</p>';
-        document.getElementById("result3").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[2].probability).toFixed(2)) + '</snap><br>' + response.predictions[2].tagName.toUpperCase() + '</p>';
-        document.getElementById("result4").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[3].probability).toFixed(2)) + '</snap><br>' + response.predictions[3].tagName.toUpperCase() + '</p>';
-        document.getElementById("result5").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[4].probability).toFixed(2)) + '</snap><br>' + response.predictions[4].tagName.toUpperCase() + '</p>';
+        document.getElementById("result3").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[2].probability).toFixed(2)) + '</snap><br><snap style="font-weight:normal;font-size:smaller;color:lightgray">' + response.predictions[2].tagName.toUpperCase() + '</p>';
+        document.getElementById("result4").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[3].probability).toFixed(2)) + '</snap><br><snap style="font-weight:normal;font-size:smaller;color:lightgray">' + response.predictions[3].tagName.toUpperCase() + '</p>';
+        document.getElementById("result5").innerHTML = '<p> <snap style="font-weight:bold;font-size:smaller;color:lightgray">' + (Number(response.predictions[4].probability).toFixed(2)) + '</snap><br><snap style="font-weight:normal;font-size:smaller;color:lightgray">' + response.predictions[4].tagName.toUpperCase() + '</p>';
       } else {
         document.getElementById("probability").innerHTML = "<b>Error</b>";
         document.getElementById("result1").innerHTML = '';
