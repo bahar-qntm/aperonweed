@@ -87,7 +87,6 @@ snapshotButton.onclick = function() {
   canvas.height = videoElement.videoHeight;
   canvas.getContext('2d').drawImage(videoElement, 0, 0, canvas.width, canvas.height);
 
-  //var url = "https://azcognitivetomatoes-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/5495dba9-85c8-4463-a83a-5ce43778f646/classify/iterations/tomato-disease1/image";
   //var url = "https://aperonncus-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/1fc5c98b-7c0d-4fd3-b41f-4356f78310c9/classify/iterations/Iteration1/image"
   var url = "https://qntm-apim.azure-api.net/KnowYourWeed/classify"
 
