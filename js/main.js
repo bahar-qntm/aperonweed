@@ -88,8 +88,8 @@ snapshotButton.onclick = function() {
   canvas.getContext('2d').drawImage(videoElement, 0, 0, canvas.width, canvas.height);
 
   //var url = "https://aperonncus-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/1fc5c98b-7c0d-4fd3-b41f-4356f78310c9/classify/iterations/Iteration1/image"
-  var url = "https://qntm-apim.azure-api.net/KnowYourWeed/classify"
-
+  //var url = "https://qntm-apim.azure-api.net/KnowYourWeed/classify"
+  var url = "https://qntm-apim.azure-api.net/KnowYourWeed-Backup/classify"
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url);
 
