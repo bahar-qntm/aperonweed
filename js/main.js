@@ -94,7 +94,7 @@ snapshotButton.onclick = function() {
   xhr.open("POST", url);
 
   xhr.setRequestHeader("Ocp-Apim-Subscription-Key", "39ee06e8c47940f78abb8fee0036796a");
-  xhr.setRequestHeader("Content-Type", "application/octet-stream");
+  xhr.setRequestHeader("Content-Type", "multipart/form-data");
   //xhr.setRequestHeader("Content-Length", "0");
 
   xhr.onreadystatechange = function () {
